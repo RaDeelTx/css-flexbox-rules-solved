@@ -11,7 +11,10 @@ body {
 }
 
 .content {
+  display: flex;
+  flex-direction: row;
   padding: 30px;
+  gap: 30px;
 }
 
 h2 {
@@ -25,10 +28,48 @@ p {
 /* 👇👇👇  ADD YOUR FORM STYLES BENEATH  👇👇👇*/
 
 form {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #a9a9a9;
   padding: 20px;
 }
-
+.form-input-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+.form-checkbox-control {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form-submit-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.form-group-horizontal-control {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  height: 55px;
+  gap: 20px;
+  width: auto;
+}
+.form-group-vertical-control {
+  display: flex;
+  flex-direction: column;
+}
+.form-radio-control {
+  font-weight: normal;
+  /* display: flex; */
+}
+.form-radio-control label {
+  font-weight: 400;
+}
 .subtext {
   color: #a9a9a9;
   font-weight: unset;
@@ -36,18 +77,32 @@ form {
 
 #sign-in,
 #sign-up {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
   width: 100%;
+  gap: 20px;
 }
-
+#sign-in-form,
+#sign-up-form {
+  display: flex;
+  gap: 20px;
+}
+#city,
+#state {
+  height: 30px;
+}
 a {
-  color: #335eea;
+  color: #164cff;
   text-decoration: none;
 }
 
 label {
   font-weight: bold;
 }
-
+label[for="stay-signed-in"] {
+  font-weight: 400;
+}
 input {
   width: 100%;
   height: 30px;
